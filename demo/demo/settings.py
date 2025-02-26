@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'demoapp.apps.DemoappConfig'
+    'demoapp.apps.DemoappConfig',
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
@@ -87,6 +89,10 @@ DATABASES = {
 }
 
 AUTH_USER_MODEL = 'demoapp.User'
+
+MEDIA_ROOT = '%s/demoapp/static/' % BASE_DIR
+
+CKEDITOR_UPLOAD_PATH = "ckeditors/lessons/"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
